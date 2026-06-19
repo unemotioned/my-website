@@ -12,9 +12,19 @@
   --tokyonight-storm-white: #a9b1d6;
 }
 
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrainsmono/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   background-color: var(--tokyonight-storm-bg);
   color: var(--tokyonight-storm-fg);
+
+  font-family: 'JetBrains Mono', monospace;
 }
 
 p {
