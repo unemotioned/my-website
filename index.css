@@ -17,7 +17,7 @@
   src: url("/fonts/jetbrainsmono/JetBrainsMono-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional; /* browser waits ~100ms for fonts to remove flicker */
 }
 
 body {
