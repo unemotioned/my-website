@@ -14,10 +14,11 @@
 
 @font-face {
   font-family: "Iosevka";
-  src: url("./public/fonts/iosevka/IosevkaNerdFontMono-Regular.ttf") format("truetype");
+  src: url("./public/fonts/iosevka/IosevkaNerdFontMono-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: block; /* up to 3s block period — hides text until font loads, no FOUT */
+  font-display: swap; /* ~100ms block period — renders fallback text immediately, swaps when font loads (FOUT) */
 }
 
 body {
