@@ -26,6 +26,19 @@ body {
   color: var(--tokyonight-storm-fg);
 
   font-family: "Iosevka", monospace;
+
+  width: 85vmax;
+  max-width: 1200px;
+  /* center horizontal */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article {
+  border-left: 0.1rem solid var(--tokyonight-storm-cyan);
+  border-right: 0.1rem solid var(--tokyonight-storm-cyan);
+
+  padding: 0 2rem;
 }
 
 p {
