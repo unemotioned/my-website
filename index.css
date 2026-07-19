@@ -1,4 +1,5 @@
 :root {
+  --tokyonight-storm-bg-dark: #1e2336;
   --tokyonight-storm-bg: #24283b;
   --tokyonight-storm-fg: #c0caf5;
 
@@ -26,7 +27,10 @@ body {
   color: var(--tokyonight-storm-fg);
 
   font-family: "Iosevka", monospace;
+}
 
+main,
+.header-wrapper {
   width: 85vmax;
   max-width: 1200px;
   /* center horizontal */
@@ -34,9 +38,21 @@ body {
   margin-right: auto;
 }
 
+header {
+  background-color: var(--tokyonight-storm-bg-dark);
+}
+
+.header-wrapper {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+
+  border-bottom: 1px solid var(--tokyonight-storm-blue);
+}
+
 article {
-  border-left: 0.1rem solid var(--tokyonight-storm-cyan);
-  border-right: 0.1rem solid var(--tokyonight-storm-cyan);
+  border-left: 1px solid var(--tokyonight-storm-blue);
+  border-right: 1px solid var(--tokyonight-storm-blue);
 
   padding: 0 2rem;
 }
