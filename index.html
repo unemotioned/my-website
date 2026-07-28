@@ -14,6 +14,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./index.css" />
+    <script src="./public/jquery/jquery-4.0.0.min.js"></script>
+    <script src="./index.js"></script>
   </head>
   <body>
     <header>
@@ -54,6 +56,38 @@
           >
           is popular.
         </p>
+
+        <hr />
+
+        <h2>Balance Flattener</h2>
+
+        <p>
+          Calculates how much points to use to make the bank account digits nice
+          and flat.
+        </p>
+
+        <form id="flattenerForm">
+          <table>
+            <tbody>
+              <tr>
+                <td><label for="balance">balance</label></td>
+                <td><input type="text" id="balance" /></td>
+              </tr>
+              <tr>
+                <td><label for="price">price</label></td>
+                <td><input type="text" id="price" /></td>
+              </tr>
+              <tr>
+                <td><label for="points">points</label></td>
+                <td><input type="text" id="points" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <input type="submit" value="Submit" />
+        </form>
+
+        <div id="showPoints"></div>
       </article>
     </main>
   </body>
