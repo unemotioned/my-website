@@ -26,76 +26,38 @@
   </head>
   <body>
     <header>
-      <div class="header-wrapper">
-        <div>
-          <img
-            src="public/img/favicon.svg"
-            alt="unemotioned_logo"
-            height="80rem"
-          />
-        </div>
-
-        <div>
-          <h1>UnEmotioneD</h1>
-        </div>
+      <div class="inner-header">
+        <img src="./public/img/favicon.svg" alt="logo" class="logo" />
+        <h1 class="title">Balance Flattener</h1>
       </div>
     </header>
-
     <main>
-      <h1>I Use Arch by the way</h1>
-
-      <article>
+      <section class="flattener-section">
         <p>
-          Using
-          <!-- open in new tab w/ `target` attribute -->
-          <a href="https://github.com/folke/tokyonight.nvim" target="_blank"
-            >Tokyo Night Storm</a
-          >
-          colors by folke.
-        </p>
-
-        <p>
-          Font is
-          <a href="https://typeof.net/Iosevka/" target="_blank">Iosevka</a>
-          since
-          <a href="https://www.jetbrains.com/lp/mono/" target="_blank"
-            >JetBrains Mono</a
-          >
-          is popular.
-        </p>
-
-        <hr />
-
-        <h2>Balance Flattener</h2>
-
-        <p>
-          Calculates how much points to use to make the bank account digits nice
+          Calculates how much points to use to make the bank account digit nice
           and flat.
         </p>
-
-        <form id="flattenerForm">
+        <form class="flattener-form">
           <table>
             <tbody>
               <tr>
-                <td><label for="balance">balance</label></td>
+                <td><label for="balance">Balance</label></td>
                 <td><input type="text" id="balance" /></td>
               </tr>
               <tr>
-                <td><label for="price">price</label></td>
+                <td><label for="price">Price</label></td>
                 <td><input type="text" id="price" /></td>
               </tr>
               <tr>
-                <td><label for="points">points</label></td>
+                <td><label for="points">Points</label></td>
                 <td><input type="text" id="points" /></td>
               </tr>
             </tbody>
           </table>
-
           <input type="submit" value="Submit" />
         </form>
-
-        <div id="showPoints"></div>
-      </article>
+        <div class="flattener-results"></div>
+      </section>
     </main>
   </body>
 </html>
