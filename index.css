@@ -10,7 +10,7 @@
   --magenta: #bb9af7;
   --cyan: #7dcfff;
 
-  --border: 1px solid #2f3549;
+  --border: 1px solid #414868;
 }
 
 * {
@@ -56,12 +56,15 @@ header {
   padding: 0.5rem;
 }
 
-.inner-header {
+.inner-header,
+main {
   /* center current element relative to parent */
   margin-inline: auto;
   width: 80vw;
   max-width: 1200px;
+}
 
+.inner-header {
   /* child elements to stack horizontally */
   display: flex;
   gap: 0.5rem;
@@ -77,8 +80,21 @@ header {
   font-weight: bold;
 }
 
-main {
-  width: 80vw;
-  max-width: 1200px;
-  margin-inline: auto;
+.flattener-form label {
+  color: var(--white);
+}
+
+.flattener-submit {
+  background-color: var(--black);
+  color: var(--fg);
+
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.3rem;
+  border: var(--border);
+}
+.flattener-submit:hover {
+  cursor: pointer;
+  color: var(--blue);
+  border-color: var(--blue);
 }
