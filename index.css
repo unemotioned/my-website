@@ -15,11 +15,12 @@
 
 @font-face {
   font-family: "Iosevka";
-  src: url("./public/fonts/iosevka/IosevkaNerdFontMono-Regular.ttf")
-    format("truetype");
+  src: url("./public/fonts/IosevkaNerdFontMono-Regular.woff2") format("woff2");
   font-weight: 400;
+  /* not italic */
   font-style: normal;
-  font-display: swap; /* ~100ms block period — renders fallback text immediately, swaps when font loads (FOUT) */
+  /* ~100ms block period — renders fallback text immediately, swaps when font loads (FOUT) */
+  font-display: swap;
 }
 
 body {
