@@ -1,43 +1,45 @@
-// 0: JS is running before form tag is created
-// console.log($("#flattenerForm").length);
+const appendPoints = function (pointsToUse) {
+    const $useTag = $('<p>').text(pointsToUse);
 
-const appendPoints = function (use) {
-    const useTag = $('<p></p>').text(use);
-
-    $('#showPoints').append(useTag);
+    $('.flattener-results').append($useTag);
 };
 
 const flattener = function (balance, price, points) {
-    $('#showPoints').empty();
+    $('.flattener-results').empty();
 
-    const pointDigits = String(points).length;
-    let prevPoints = 0;
+    const pointsDigit = String(points).length;
+    const usedPoints = new Set();
 
-    for (let i = 0; i < pointDigits; i++) {
-        const n = 10 ** (i + 1);
-        const use = (n - ((balance - price) % n)) % n;
+    for (let i = 1; i <= pointsDigit; i++) {
+        const n = 10 ** i;
+        const pointsToUse = n - ((balance - price) % n);
 
-        if (use > points) {
+        if (pointsToUse > points) {
             break;
         }
-        if (prevPoints == use) {
+
+        if (usedPoints.has(pointsToUse)) {
             continue;
         }
 
-        prevPoints = use;
-        appendPoints(use);
+        appendPoints(pointsToUse);
+
+        if (pointsToUse === points) {
+            break;
+        }
+
+        usedPoints.add(pointsToUse);
     }
 };
 
 // run when document is ready
 $(function () {
-    $('#flattenerForm').on('submit', function (event) {
-        // keeps the console from getting cleared
+    $('.flattener-form').on('submit', function (event) {
         event.preventDefault();
 
-        const balance = $('#balance').val();
-        const price = $('#price').val();
-        const points = $('#points').val();
+        const balance = Number($('#balance').val());
+        const price = Number($('#price').val());
+        const points = Number($('#points').val());
 
         flattener(balance, price, points);
     });
