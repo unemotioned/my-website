@@ -1,16 +1,23 @@
 :root {
-  --tokyonight-storm-bg-dark: #1e2336;
-  --tokyonight-storm-bg: #24283b;
-  --tokyonight-storm-fg: #c0caf5;
+  --bg: #202331;
+  --fg: #d5dcff;
+  --black: #1a1b26;
+  --white: #737aa2;
+  --red: #f7768e;
+  --green: #9ece6a;
+  --yellow: #e0af68;
+  --blue: #7aa2f7;
+  --magenta: #bb9af7;
+  --cyan: #7dcfff;
 
-  --tokyonight-storm-black: #1d202f;
-  --tokyonight-storm-red: #f7768e;
-  --tokyonight-storm-green: #9ece6a;
-  --tokyonight-storm-yellow: #e0af68;
-  --tokyonight-storm-blue: #7aa2f7;
-  --tokyonight-storm-magenta: #bb9af7;
-  --tokyonight-storm-cyan: #7dcfff;
-  --tokyonight-storm-white: #a9b1d6;
+  --border: 1px solid #2f3549;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* padding and border included in width and height */
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -23,45 +30,55 @@
   font-display: swap;
 }
 
-body {
-  background-color: var(--tokyonight-storm-bg);
-  color: var(--tokyonight-storm-fg);
+@font-face {
+  font-family: "Iosevka";
+  src: url("./public/fonts/IosevkaNerdFontMono-Bold.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
   font-family: "Iosevka", monospace;
 }
 
-main,
-.header-wrapper {
-  width: 85vmax;
-  max-width: 1200px;
-  /* center horizontal */
-  margin-left: auto;
-  margin-right: auto;
-}
-
 header {
-  background-color: var(--tokyonight-storm-bg-dark);
+  background-color: var(--black);
+  /* rem: unit relative to HTML font size */
+  margin-bottom: 0.5rem;
+  border-bottom: var(--border);
+  padding: 0.5rem;
 }
 
-.header-wrapper {
+.inner-header {
+  /* center current element relative to parent */
+  margin-inline: auto;
+  width: 80vw;
+  max-width: 1200px;
+
+  /* child elements to stack horizontally */
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
-
-  border-bottom: 1px solid var(--tokyonight-storm-blue);
+  gap: 0.5rem;
+  align-items: center;
 }
 
-article {
-  border-left: 1px solid var(--tokyonight-storm-blue);
-  border-right: 1px solid var(--tokyonight-storm-blue);
-
-  padding: 0 2rem;
+.logo {
+  height: 3rem;
 }
 
-p {
-  color: var(--tokyonight-storm-white);
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-a {
-  color: var(--tokyonight-storm-blue);
+main {
+  width: 80vw;
+  max-width: 1200px;
+  margin-inline: auto;
 }
