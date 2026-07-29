@@ -80,20 +80,19 @@ main {
   font-weight: bold;
 }
 
-.flattener-form label {
-  color: var(--white);
-}
-
-.flattener-submit {
+.button {
+  width: 6rem;
+  height: 3rem;
   background-color: var(--black);
-  color: var(--fg);
 
+  color: var(--fg);
+  font-family: "Iosevka", monospace;
   font-size: 1rem;
-  padding: 1rem 1.5rem;
-  border-radius: 0.3rem;
+
   border: var(--border);
+  border-radius: 0.4rem;
 }
-.flattener-submit:hover {
+.button:hover {
   cursor: pointer;
   color: var(--blue);
   border-color: var(--blue);

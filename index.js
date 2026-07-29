@@ -35,6 +35,7 @@ const flattener = function (balance, price, points) {
 // run when document is ready
 $(function () {
     $('.flattener-form').on('submit', function (event) {
+        // keeps the browser from reloading
         event.preventDefault();
 
         const balance = Number($('#balance').val());
@@ -42,5 +43,15 @@ $(function () {
         const points = Number($('#points').val());
 
         flattener(balance, price, points);
+    });
+
+    $('.flattener-clear').on('click', function (event) {
+        event.preventDefault();
+
+        $('.flattener-results').empty();
+
+        $('#balance').val('');
+        $('#price').val('');
+        $('#points').val('');
     });
 });
