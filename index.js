@@ -18,7 +18,7 @@ const flattener = function (balance, price, points) {
             break;
         }
 
-        if (usedPoints.has(pointsToUse)) {
+        if (usedPoints.has(pointsToUse) || pointsToUse === n) {
             continue;
         }
 
