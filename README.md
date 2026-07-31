@@ -13,7 +13,7 @@ Calculates how much points to use to flatten the bank account.
 ```js
 const flattener = function (balance, price, points) {
   const pointsDigit = String(points).length;
-  const usedPoints = new Set(); // to remove duplication
+  const usedPoints = new Set(); // to remove duplicates
 
   for (let i = 1; i <= pointsDigit; i++) {
     const n = 10 ** i;
@@ -30,7 +30,7 @@ const flattener = function (balance, price, points) {
 
     console.log("Points to use: ", pointsToUse);
 
-    // stop if maximum usable points is reached
+    // stop if maximum usable points are reached
     if (pointsToUse === points) {
       break;
     }
