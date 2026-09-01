@@ -1,6 +1,6 @@
 .DS_Store
-.localized
+
+.vscode/**
+!.vscode/settings.json
 
 node_modules/
-
-.vscode/
